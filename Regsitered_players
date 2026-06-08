@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Players</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            text-align:center;
+            background:#f4f4f4;
+        }
+
+        table{
+            margin:auto;
+            border-collapse:collapse;
+            width:80%;
+            background:white;
+        }
+
+        th, td{
+            border:1px solid #ddd;
+            padding:10px;
+        }
+
+        th{
+            background:green;
+            color:white;
+        }
+
+        h2{
+            color:darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registered Cricket Camp Players</h2>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Experience</th>
+</tr>
+
+{% for player in players %}
+<tr>
+    <td>{{player[0]}}</td>
+    <td>{{player[1]}}</td>
+    <td>{{player[2]}}</td>
+    <td>{{player[3]}}</td>
+    <td>{{player[4]}}</td>
+    <td>{{player[5]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
